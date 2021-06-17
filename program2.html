@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blink the text</title>
+    <style>
+        p {
+            background: red;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <p class="blink"; style="font-size: 20px;">
+       jQuery is a lightweight, "write less, do more", JavaScript library. The purpose of jQuery is to make it much easier to use JavaScript on your website. 
+    </p>
+
+    <script>
+        function blink(selector){
+            $(selector).fadeOut('slow', function(){
+            $(this).fadeIn('slow', function(){
+                blink(this);
+            });
+            });
+        }
+        blink('.blink');
+    </script>
+</body>
+</html>
