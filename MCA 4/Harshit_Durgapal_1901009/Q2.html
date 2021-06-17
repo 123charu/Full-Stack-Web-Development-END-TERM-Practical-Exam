@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Q2</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body align = "center">
+	<h1 style = "color:green;" >JQUERY</h1>
+	<p id = "JQ_UP" style = "font-size: 15px; font-weight: bold;"></p>
+	<button onclick = "JQ_BLINK()">click here</button>
+	<p id = "JQ_DOWN" style = "font-size: 20px; font-weight: bold; color:green;"></p>
+	<script>
+		var el_up = document.getElementById('JQ_UP');
+		var el_down = document.getElementById('JQ_DOWN');
+		el_up.innerHTML = "Click on the button to change background-color and start the text blinking.";
+		el_down.innerHTML = "Binking Text";
+		function JQ_BLINK() {
+			$('#JQ_DOWN').each(function() {
+				var elem = $(this);
+				setInterval(function() {
+					if (elem.css('visibility') == 'hidden') {
+						elem.css('visibility', 'visible');
+					} else {
+						elem.css('visibility', 'hidden');
+					}	
+				}, 100);
+			});
+		}
+	</script>
+	<script>
+	$(document).ready(function(){
+	    $("button").click(function(){
+	        $("#JQ_UP").css("background-color", "red");
+	    });
+	});
+</script>
+</body>
+</html>
