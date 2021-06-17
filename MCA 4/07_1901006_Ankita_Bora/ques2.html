@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ques 2</title>
+    <style>
+        p {
+            background: red;
+	    color : white;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <p class="blink_text">
+        This text will blink.
+    </p>
+
+    <script>
+        function blink(selector){
+            $(selector).fadeOut('slow', function(){
+            $(this).fadeIn('slow', function(){
+                blink(this);
+            });
+            });
+        }
+        blink('.blink_text');
+    </script>
+</body>
+</html>
