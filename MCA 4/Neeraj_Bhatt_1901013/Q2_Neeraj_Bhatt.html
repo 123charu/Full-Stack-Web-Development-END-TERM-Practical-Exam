@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p{
+     background:red;
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h3><p>Full stack <span class="blink"><b>Question 2</b></span></p></h3>
+<script>
+function blink_text(selector) {
+    $(selector).fadeOut(700,function(){
+    $(this).fadeIn(700,function(){
+         blink_text(this);
+      });
+      });
+   }
+blink_text('.blink');
+</script>
+</body>
+</html>
