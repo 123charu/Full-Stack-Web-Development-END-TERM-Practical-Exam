@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Text blinking</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  
+function blink_text() {
+    $('.blink').fadeOut(600);
+    $('.blink').fadeIn(400);
+}
+setInterval(blink_text, 100);
+
+</script>
+</head>
+<body>
+  <center><p style="background-color:red;border-radius:50px;white;width:40%;font-size:50px;margin-top:200px;"><span class="blink"><B>ANAN</B>D</span> from Haridwar</p></center>
+</body>
+</html>
