@@ -34,26 +34,6 @@ if (mysqli_query($conn, $sql1)) {
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
-
-
-$sql2="select * from employee";
-$result=mysqli_query($conn,$sql2);
-if($result)
-{
-echo "Query Executed"."<br>";
-while($query_executed=mysqli_fetch_assoc($result))
-{
-echo $Query_execute['emp_no']."<br>";
-echo $Query_execute['emp_name']."<br>";
-echo $Query_execute['deptt']."<br>";
-echo $Query_execute['mob_no']."<br>";
-}
-}
-else
-{
-echo "query not executed";
-}
-
 $sql2 = "SELECT *from employee";
 $result = mysqli_query($conn, $sql2);
 
