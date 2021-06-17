@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>
+		Q2.write a program to set background color for an element also blink the text using jQuery?
+	</title>
+
+	
+	<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	</script>
+	
+	<style>
+	.container{
+              max-width: 500px
+              margin: o auto
+              padding: 20px
+             }
+      p{
+        padding: 5px 10px;
+	   }
+	</style>
+
+	<script>
+		$(document).ready(function () {
+			$("button").click(function () {
+				 $("h1").css("background-color","red");
+				 
+			});
+		});
+	</script>
+	
+</head>
+
+<body style="text-align: center;">
+	
+	<br>
+
+	<h1>click on the button to turn it red </h1>
+	<button>for red color</button>
+	
+	<div class="container">
+  
+     <p class="bg-info message">click on below button to blink text</p>
+      <button id="submit" class="btn btn-primary pull-right">Confirm</button>
+	  
+	  <script>
+	  $('#submit').click(function() {
+         $('.message').fadeOut(250).fadeIn(250); 
+          });
+	  </script>
+  
+</div>
+	
+</body>
+
+</html>
