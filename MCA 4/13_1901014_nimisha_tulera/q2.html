@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blink </title>
+    <style>
+        p {
+            background: red;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <p class="blink">
+        paragraph blink
+    </p>
+
+    <script>
+        function blink(selector){
+            $(selector).fadeOut('slow', function(){
+            $(this).fadeIn('slow', function(){
+                blink(this);
+            });
+            });
+        }
+        blink('.blink');
+    </script>
+</body>
+</html>
