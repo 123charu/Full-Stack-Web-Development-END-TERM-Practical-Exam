@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<title>jquery</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.11/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('#para').css('background-color','red');
+});
+function mainFunc()
+{
+    $('#para').fadeOut(500);
+     $('#para').fadeIn(500);
+
+}
+setInterval(mainFunc,1000);
+</script>
+<style>
+.selected{
+    color:red;
+}
+</style>
+</head>
+<body><p id='para'>hello my name is ankit</p>
+</body>
+</html>
