@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blink the text</title>
+    <style>
+        p {
+            background: red;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <p class="blink">
+        In relation to ONLINE Full Stack Web Development End-Semester Practical Examination of JUNE 2021 the following is to be noted:
+
+Firstly, you need to fork this repository so that you can push the changes to your repository and then finally create a pull request to it.
+
+NOTE - Don't forget to FORK the repository, otherwise, you will not be able to push the code and make pull requests.
+
+You need to create a new folder inside the directory of your section.
+
+Your directory should have following format - ClassRollNo_UniversityRoll_No_FirstName_Last_Name.
+
+Questions:
+
+1.Write a program to create employee table and read employee information like emp_no, emp_name, deptt and mob_no from employee table and display all this information on the output screen. (7.5 Marks)
+
+Write a program to Set the background color red of the paragraph element also Blink the text using jQuery. (7.5 Marks)
+    </p>
+
+    <script>
+        function blink(selector){
+            $(selector).fadeOut('slow', function(){
+            $(this).fadeIn('slow', function(){
+                blink(this);
+            });
+            });
+        }
+        blink('.blink');
+    </script>
+</body>
+</html>
