@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>blink color</title>
+    <style>
+        p {
+            background: red;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <p class="blink">
+       ************** my name is ankesh************the background color red of the paragraph element
+        and the text is blink 
+
+        
+    </p>
+
+    <script>
+        function blink(selector){
+            $(selector).fadeOut('slow', function(){
+            $(this).fadeIn('slow', function(){
+                blink(this);
+            });
+            });
+        }
+        blink('.blink');
+    </script>
+</body>
+</html>
