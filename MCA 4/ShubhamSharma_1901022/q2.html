@@ -1,1 +1,33 @@
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Blink the text</title>
+    <style>
+      p {
+        display: inline-block;
+        background: red;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <p class="blink">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ullam
+      aliquam aliquid perferendis aperiam officia numquam aut tenetur
+      repudiandae deserunt. Neque, laboriosam deleniti vero atque error tempora
+      nisi explicabo nesciunt, voluptas fugit a unde id. Iste harum deserunt,
+      repellendus sint, id tempora iure eveniet pariatur maxime nisi
+      reprehenderit eaque possimus?
+    </p>
+    <script>
+      function blink(selector) {
+        $(selector).fadeOut("slow", function () {
+          $(this).fadeIn("slow", function () {
+            blink(this);
+          });
+        });
+      }
+      blink(".blink");
+    </script>
+  </body>
+</html>
