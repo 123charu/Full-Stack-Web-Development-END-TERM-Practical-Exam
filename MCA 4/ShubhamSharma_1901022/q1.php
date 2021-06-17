@@ -21,8 +21,6 @@ function create_db() {
     )";
     
     $res = mysqli_query($con, $query);
-
-
     if($res) {
         echo "Table Created";
     } else {
@@ -51,7 +49,6 @@ function readData() {
     }
     echo "</table>";
 }
-
 create_db();
 readData();
 
