@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  
+function blink_text() {
+    $('.blink').fadeOut(400);
+    $('.blink').fadeIn(400);
+}
+setInterval(blink_text, 1000);
+
+</script>
+</head>
+<body>
+  <p style="background-color:red;">Mera naam <span class="blink">Mohit Chamoli</span> and hai</p>
+</body>
+</html>
